@@ -4,12 +4,232 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuxuan Pang (test0)</title>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js"],
+        "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+        TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+        messageStyle: "none"
+      });
+    </script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+    <script>
+      function scrollToTop() {  
+      const c = document.documentElement.scrollTop || document.body.scrollTop;
+      if (c > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, c - c / 20); // 调整速度，c / 8 表示每次滚动减少8%
+      }
+      }
+    </script>
+    <title>Yuxuan Pang @ KIAA/PKU</title>
     <style>
       body{
         margin: 0;
-        height: 100vh;
+        height: 200vh;
         background-color: #eee;
+      }
+      .container{
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+      .container2{
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        background-color: #ffffff;
+      }
+      .container3{
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-left: 200px;
+        padding-right: 200px;
+        background-color: #ffffff;
+      }
+      .title_box{
+        display: flex;
+        /* border-bottom: 1px solid rgb(201, 201, 201); */
+        align-items: center;
+        justify-content: center;
+        background-color: #110000;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .bottom_box{
+        display: flex;
+        /* border-bottom: 1px solid rgb(201, 201, 201); */
+        align-items: center;
+        justify-content: right;
+        background-color: #110000;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .title_word{
+        /* padding: 10px 20px; */
+        /* border-bottom: 1px solid rgb(201, 201, 201); */
+        font-size: 18px; margin: 0; text-align: center; color: #7995e4;
+      }
+      .bottom_word{
+        font-size: 18px; text-align: left; color: #7995e4; margin-right: 50px;
+      }
+      .bottom_word2{
+        font-size: 18px; text-align: left; color: #727272; margin-right: 50px; text-decoration: none; transition: color 0.5s; 
+      }
+      .bottom_word2:hover{
+        color: #9aafe7
+      }
+      .personal_picture{
+        /* padding: 10px 20px; */
+        display: flex;
+        /* border-bottom: 1px solid rgb(201, 201, 201); */
+        font-size: 12px;
+        color: #9a9b96;
+        align-items: center;
+        justify-content: center;
+      }
+      .personal_links{
+        display: flex;
+        padding: 0px 100px;
+        /* border-bottom: 1px solid rgb(201, 201, 201); */
+        align-items: center;
+        justify-content: center;
+      }
+      .introduct_box{
+        padding: 10px 40px;
+        display: flex;
+        /* border-bottom: 1px solid rgb(201, 201, 201); */
+        color: #9a9b96;
+        align-items: center;
+        justify-content: center;
+      }
+      .introduct_word{
+        font-size: 18px; margin: 0; text-align: center; color: #727272; line-height: 300%;
+      }
+      .education_title{
+        font-size: 19px; margin: 0; text-align: center; color: #181818; line-height: 240%;
+      }
+      .hobbies_title{
+        font-size: 24px; margin: 0; text-align: center; color: #181818; line-height: 240%; padding-top: 28px; padding-bottom: 10px;
+      }
+      .education_word{
+        font-size: 18px; margin: 0; text-align: center; color: #484848; line-height: 240%;
+      }
+      .introduct_word_link{
+        font-size: 18px; margin: 0; text-align: center; color: #727272; line-height: 300%; text-decoration: none; font-weight: 600;
+        transition: color 0.5s; 
+      }
+      .introduct_word_link:hover{
+        color: #7995e4
+      }
+      .introduct_word_link2{
+        font-size: 18px; margin: 0; text-align: center; color: #727272; line-height: 300%; text-decoration: none; font-weight: 600;
+        transition: color 0.5s; 
+      }
+      .section_box1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #363636; */
+        background-image: url('./picture/stage1.jpg');
+        background-position: center center;
+        background-size: cover;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      .section_box2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #363636; */
+        background-image: url('./picture/stage2.jpg');
+        background-position: center center;
+        background-size: cover;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      .section_box3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #363636; */
+        background-image: url('./picture/stage3.jpg');
+        background-position: center center;
+        background-size: cover;
+        padding-top: 80px;
+        padding-bottom: 70px;
+      }
+      .section_box2_p100{
+        display: flex;
+        padding: 10px 100px;
+        border-bottom: 1px solid rgb(201, 201, 201);
+        /* font-size: 18px; */
+        align-items: center;
+        justify-content: center;
+        background-color: #eee;
+      }
+      .section_box2_p300{
+        display: flex;
+        padding: 10px 300px;
+        border-bottom: 1px solid rgb(201, 201, 201);
+        /* font-size: 18px; */
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+      }
+      .section_box2_p500{
+        display: flex;
+        padding: 10px 500px;
+        border-bottom: 1px solid rgb(201, 201, 201);
+        /* font-size: 18px; */
+        /* 垂直居中 */
+        align-items: center; 
+        /* 水平居中 */
+        justify-content: center;
+        background-color: #ffffff;
+      }
+      .center_box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .section_title1{
+        font-size: 24px; margin: 0; text-align: center; color: rgb(0, 0, 0);
+      }
+      .section_title2{
+        font-size: 12px; margin: 0; text-align: center; color: rgb(0, 0, 0);
+      }
+      .section_title3{
+        font-size: 18px; margin: 0; text-align: center; color: #eee;
+      }
+      .section_title4{
+        font-size: 24px; margin: 0; text-align: left; color: #000000;
+      }
+      .section_word1{
+        font-size: 15px; margin: 15; text-align: left; color: rgb(100, 100, 100); line-height: 150%;
+      }
+      .section_word2{
+        font-size: 15px; margin: 15; text-align: left; color: rgb(100, 100, 100); line-height: 240%;
+      }
+      .section_word3{
+        font-size: 18px; margin: 15; text-align: left; color: rgb(100, 100, 100); line-height: 200%;
+      }
+      .section_word4{
+        font-size: 18px; margin: 0; text-align: left; color: rgb(100, 100, 100); line-height: 200%;
+      }
+      .circle {
+        width: 52px; /* 设置圆形区域的宽度 */
+        height: 52px; /* 设置圆形区域的高度，应与宽度相等 */
+        background-color: rgb(160, 160, 160); /* 设置圆形区域的背景颜色 */
+        border-radius: 50%; /* 设置圆角的半径为50%，形成完美的圆形 */
+        transition: background-color 0.5s;
+      }
+      .circle:hover{
+        background-color: #7995e4;
       }
       /* *{
         border: 1px solid black;
@@ -19,12 +239,16 @@
       } */
       .flex{
         display: flex;
+        flex-wrap:wrap
       }
       .baiSe{
         background-color: #eee;
       }
       .flex1{
         flex: 1;
+      }
+      .flex2{
+        flex: 2;
       }
       .colunm{
         flex-direction: column;
@@ -38,124 +262,411 @@
       .mgt8{
         margin-top: 8px;
       }
-      .daoHang{
-        padding: 10px 20px;
-        border-bottom: 1px solid rgb(190, 190, 190);
-        font-size: 14px;
-        color: #666;
+      
+      .move-down2{
+        transform: translateY(2px);
       }
-      .test_word{
-        padding: 10px 20px;
-        border-bottom: 1px solid rgb(201, 201, 201);
-        font-size: 14px;
-        color: #21038d;
+      .hr-dashed1 {
+        border: 0;
+        border-top: 3px solid #7995e4;
+        width: 5%;
       }
-
-      @media (max-width:600px) {
-        .ceBian{
-          display: none;
-        }
-        .neiRong{
-          flex-direction: column;
-        }
-        .shuJuQu{
-          flex-direction: column;
-        }
-        .youQu{
-          margin-left: 8px;
-        }
-        .shuJu{
-          margin-left: 0 0 8px;
-          flex: auto;
-        }
-        .neiRong::-webkit-scrollbar{
-          display: none;
-        }
+      .hr-dashed2 {
+        border: 0;
+        border-top: 2px dashed #a2a9b6;
+        width: 90%;
+      }
+      .hr-dashed3 {
+        border: 0;
+        border-top: 3px dashed #7995e4;
+        width: 100%;
+      }
+      .icon_top{
+        transition: opacity 0.5s ease; /* 添加透明度变化的过渡效果 */
+        opacity: 0.5; /* 默认透明度 */
+      }
+      .icon_top:hover {
+        opacity: 1; /* 鼠标悬停时的透明度 */
       }
     </style>
   </head>
-  <body class="flex">
-    <!--侧边栏-->
-    <div style="width: 200px; z-index: 2;" class="ceBian baiSe">
-      <!--头像栏-->
-      <div 
-        style="
-          padding: 10px; 
-          align-items: center; 
-          justify-content: center; 
-          border-bottom: 1px solid #999;
-        " 
-        class="flex"
-      >
-        <img 
-          src="https://kangwenchang.com/logo.png" 
-          width="40px" 
-          height="40px"
-          alt=""
-        />
-        <div style="margin-left: 10px;">test</div>
-      </div>
-      <!--导航栏-->
-      <div style="flex: 1;">
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
+  <body style="display: flex; flex-direction: column;">
+    <!--顶部-->
+    <div style="z-index: 1;", class="flex1 title_box">
+      <p class="title_word">Yuxuan Pang | 庞宇萱</p>
+    </div>
+    <!--自我介绍-->
+    <div class="container" id="self_intro">
+      <div class="flex column">
+        <!--照片及链接-->
+        <div class="flex1">
+          <div style="height: 50px;" class="personal_picture"></div>
+          <div style="height: 450px;" class="personal_picture">
+            <img src="./picture/self_photo1.jpg" alt="rest" style="border-radius: 50%; width: 300px; height: 400px;">
+          </div>
+          <!-- email, ocrid... -->
+          <div style="height: 100px;" class="flex personal_links">
+          <div class="center_box flex1">
+            <div class="center_box circle">
+              <a href="mailto:1901110223@pku.edu.cn">
+                <img src="./icon/email.png" width="45px" height="50px" alt="email figure">
+              </a>
+            </div>
+          </div>
+          <div class="center_box flex1">
+            <div class="center_box circle">
+              <div class="move-down2">
+                <a href="https://scholar.google.com/citations?user=sO5j1L8AAAAJ">
+                  <img src="./icon/google_scholar.png" width="38px" height="38px" alt="google_scholar figure">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="center_box flex1">
+            <div class="center_box circle">
+              <div class="move-down2">
+                <a href="https://github.com/yuxuanpang">
+                  <img src="./icon/github.png" width="45px" height="45px" alt="github figure">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="center_box flex1">
+            <div class="center_box circle">
+              <div class="move-down2">
+                <a href="https://orcid.org/my-orcid?orcid=0009-0005-3823-9302">
+                  <img src="./icon/orcid.svg" width="40px" height="40px" alt="orcid figure">
+                </a>
+              </div>
+            </div>
+          </div>
+          </div> 
+          <div style="height: 50px;" class="personal_picture"></div>
+        </div>
+        <!--简单介绍-->
+        <div class="introduct_box flex1">
+          <p class="introduct_word">
+            Hi, 
+            <br>I'm currently a PhD. student of Prof. <a class="introduct_word_link2" href="https://kiaa.pku.edu.cn/info/1010/1008.htm">Xue-Bing Wu</a>
+            <br>at the KIAA institution in Peking University.
+            <br>My research interest focus on the slitless spectroscopy QSO survey.
+            <br>Here is my <a class="introduct_word_link" href="./data/Pang_Yuxuan_CV.pdf">CV</a>.
+          </p>
+        </div>  
       </div>
     </div>
-    <!--主区域-->
-    <div style="flex: 1;" class="column">
-      <!--头部栏-->
-      <div style="height: 60px; z-index: 1;", class="baiSe test_word">
-       header
+    <!--分割线1-->
+    <!-- <div style="height: 50px;"></div> -->
+    <!--研究进展，规划-->
+    <div class="section_box1">
+      <div>
+        <p class="section_title1">Research</p>
+        <p class="section_title2">QSO survey/ slitless spectroscopy/ ML</p>
       </div>
-      <!--内容区-->
-      <div style="flex: 1; overflow: auto;" class="neiRong flex">
-        <!--左区-->
-        <div style="flex: 3;" class="mg8">
-          <!--数据区-->
-          <div style="flex: 1" class="shuJuQu flex">
-            <!--数据块-->
-            <div style="height: 100px;" class="shuJu baiSe mgr8 test_word">
-              data 1
-            </div>
-            <div style="height: 100px;" class="shuJu baiSe mgr8 test_word">
-              data 2
-            </div>
-            <div style="height: 100px;" class="shuJu baiSe mgr8 test_word">
-              data 3
-            </div>
-            <div style="height: 100px;" class="shuJu baiSe mgr8 test_word">
-              data 4
-            </div>
-          </div>
-          <!--列表区-->
-          <div class="column">
-            <!--列表项-->
-            <div style="height: 160px; flex: 1;" class="baiSe mgt8 test_word">
-              table 1
-            </div>
-            <div style="height: 160px; flex: 1;" class="baiSe mgt8 test_word">
-              table 2
-            </div>
-            <div style="height: 160px; flex: 1;" class="baiSe mgt8 test_word">
-              table 3
-            </div>
-          </div>          
-        </div>
-        <!--右区-->
-        <div style="flex: 1;" class="youQu column mgr8 mgt8">
-          <!--提示区-->
-          <div style="height: 150px;" class="baiSe test_word">
-            notice
-          </div>
-          <!--消息区-->
-          <div style="height: 300px;" class="baiSe mgt8 test_word">
-            message
-          </div>             
+    </div>
+    <!--研究综述-->
+    <div class="flex flex1 container2" id="research_ge">
+      <div style="align-items: center; justify-content: center;" class="flex">
+        <div class="flex1">
+          <p class="section_word1">My research interests focus on the quasar (QSO) selection and properties estimation from slitless spectroscopy. 
+            Currently, I'm using the JWST FRESCO/CONGRESS data to understand the QSO near-infrared broad emission lines (like HeI, Pa$\alpha$), 
+            and try to give an investigation for further selection and properties estimation by those emission lines.
+            <br><br>My Ph.D. thesis centers on the 3D-HST survey and the Chinese Space Station Telescope (CSST) simulation data for similar purposes. 
+            Using the Grizli modeling method, 3D-HST G141 grism data could select a more complete sample in redshift 0.8-1.6. 
+            On the other hand, our simulation shows that the CSST slitless spectroscopy survey has the potential to discover about 1.3 million new quasars 
+            in redshift 0-5 and provide important contributions to AGN science and cosmology.
+            <br><br>In broader terms, I have also collaborated on other QSO properties, like searching for changing-look QSOs and investigating 
+            QSO variability through X-ray, optical, and infrared photometry and spectroscopy.
+          </p>
         </div>
       </div>
+    </div>
+    <div class="container2" id="dashline1">
+      <div>
+        <HR class="hr-dashed2"></HR>
+      </div>
+    </div>
+    <!--研究进展-描述-->
+    <div class="flex flex1 container2" id="research_dis">
+      <!--研究进展1-->
+      <div style="height: 550px;" class="flex flex1 column">
+        <div style="height: 550px;" class="flex1">
+          <div style="height: 400px; text-align: center" class="flex1">
+              <img src="./research/3D-HST-new_qso.jpg" height="100%" alt="research1">
+              <!-- <p style="text-align: center" class="section_word1">Figure 1: </p> -->
+          </div>
+          <div style="height: 150px; text-align: center" class="flex1">
+              <p class="section_word1; text-align: center">
+                Some examples of the 2D and 1D spectra of new QSO candidates selected from 3D-HST project. 
+                <br>Three panels from left to right: the reference image, 2D G141 spectra, and 1D extracted spectra.
+                <br>See more details in Pang et al. 2024(a)
+              </p>
+          </div> 
+        </div>
+      </div>
+      <!--研究进展2-->
+      <div style="height: 550px;" class="flex flex1 column">
+        <div style="height: 550px;" class="flex1">
+          <div style="height: 400px; text-align: center" class="flex1">
+              <img src="./research/csst_spec.jpg" height="100%" alt="research2">
+              <!-- <p style="text-align: center" class="section_word1">Figure 1: </p> -->
+          </div>
+          <div style="height: 150px; text-align: center" class="flex1">
+              <p class="section_word1; text-align: center">
+                One extracted 2D and 1D spectrum of a simulated QSO from CSST Cycle6 simulation. 
+                <br>See more details in Pang et al. 2024(b)
+              </p>
+          </div> 
+        </div>
+      </div>
+    </div>
+     <!--研究展望-->
+    <div style="align-items: center; justify-content: center;" class="container2 flex" id="research_pro">
+      <div>
+        <div style="height: 400px; text-align: center">
+          <img src="./research/JWST_fit.jpg" height="100%" alt="research3">
+        </div>
+        <div style="height: 100px; text-align: center">
+          <p class="section_word1; text-align: center">
+            QSOFITMORE fitting results of one known QSO in CONGRESS & FRESCO survey slitltess spectra. 
+            <br>Still working on the detail analysis and QSO blind searching
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--分割线2-->
+    <div class="section_box2">
+      <div>
+        <p class="section_title3">
+          𝓡𝓮𝓵𝓲𝓰𝓲𝓸𝓷𝓼 𝓻𝓲𝓼𝓮 𝓪𝓷𝓭 𝓯𝓪𝓵𝓵, 𝓮𝓶𝓹𝓲𝓻𝓮𝓼 𝓽𝓾𝓻𝓷 𝓽𝓸 𝓭𝓾𝓼𝓽, 𝔂𝓮𝓽 𝓼𝓬𝓲𝓮𝓷𝓬𝓮 𝓻𝓮𝓶𝓪𝓲𝓷𝓼 𝓮𝓽𝓮𝓻𝓷𝓪𝓵.
+          <!-- 𝓪、 𝓫、 𝓬 、𝓭、 𝓮、 𝓯、 𝓰、 𝓱、 𝓲 、𝓳 、𝓴、 𝓵 、𝓶、 𝓷 、𝓸、 𝓹 、𝓺、 𝓻 、𝓼 、𝓽 、𝓾、𝓿 、𝔀、 𝔁、 𝔂、 𝔃。
+          𝓐、 𝓑、 𝓒 、𝓓、 𝓔、 𝓕、 𝓖 、𝓗 、𝓘 、𝓙 、𝓚、 𝓛、 𝓜 、𝓝、 𝓞、𝓟 、𝓠 、𝓡 、𝓢、 𝓣、 𝓤 、𝓥、 𝓦 、𝓧 、𝓨、 𝓩。 -->
+        </p>
+      </div>
+    </div>
+    <!--More about me-->
+    <div class="container" id="more_info">
+      <div class="flex column">
+        <!--education-->
+        <div style="flex-direction: column;" class="introduct_box flex1 flex">
+          <p style="padding-top: 80px;" class="education_title">EDUCATION</p>
+          <HR class="hr-dashed1"></HR>
+          <div class="flex1">
+            <p class="education_word">
+              Department of Astronomy, Peking University, China
+              <br>Ph.D. in Astronomy & Astrophysics
+              <br>2019 - 2025 (expected)
+              <br>Department of Physics, Beijing Institute of Technology, China
+              <br>B.S. in Applied Physics
+              <br>2015 - 2019
+            </p>
+          </div>
+        </div>  
+        <!--照片-->
+        <div class="flex1">
+          <div style="height: 80px;" class="personal_picture"></div>
+          <div style="height: 400px;" class="personal_picture">
+            <img src="./picture/self_photo2.jpg" alt="rest" style="padding-right:50px; width: 320px; height: 400px;">
+          </div>
+          <div style="height: 80px;" class="personal_picture"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="dashed2">
+      <div>
+        <HR class="hr-dashed3"></HR>
+      </div>
+    </div>
+    <!--其他有关研究的内容-->
+    <div class="flex flex1 container" id="other_res">
+      <div style="display: flex; flex-direction: column; flex: 2;" class="flex">
+        <!--observations-->
+        <div style="height: 20px;" class="flex">
+          <img src="./icon/observation.png" height="100%" alt="observation_icon" style="transform: translateY(10px);">
+          <p style="transform: translateX(5px);">Observations</p>
+        </div>
+        <div style="padding-top: 10px;" class="flex1">
+          <p class="section_word2">
+            P200 TSPEC: 3 nights;
+            <br>Xinglong 2.16-meter telescope: 10 nights;
+            <br>Lijiang 2.4-meter telescope: 9 nights
+          </p>
+        </div>
+        <!--Teaching-->
+        <div style="height: 20px;" class="flex">
+          <img src="./icon/teaching.png" height="100%" alt="observation_icon" style="transform: translateY(15px);">
+          <p style="transform: translateX(5px);">Teaching</p>
+        </div>
+        <div style="padding-top: 10px;" class="flex1">
+          <p class="section_word2">
+            Lecturer, Jul. 2024, CSST Summer School
+            <br>Teaching Assistant, Jul. 2022, CSST Summer School
+            <br>Teaching Assistant, 2021-2022B, Basic Astronomy
+          </p>
+        </div>
+      </div>
+      <!--proposals-->
+      <div style="display: flex; flex-direction: column; flex: 3; padding-left: 20px;" class="flex">
+        <div style="height: 20px;" class="flex">
+          <img src="./icon/proposal.png" height="100%" alt="proposal_icon" style="transform: translateY(15px);">
+          <p style="transform: translateX(5px);">Proposals</p>
+        </div>
+        <div style="padding-top: 10px;" class="flex1">
+          <p class="section_word3">
+            CTAP2025-A0028: 
+            <br>Optical Identifications of the Slitless Spectroscopy Selected Quasar Candidates (PI)
+            <br><br>CTAP2024-A0073: 
+            <br>A Quest for the Evolutionary Stage of FeLoBAL Quasars with Near-Infrared Spectroscopy (PI)
+            <br><br>Joint application for the 2-meter telescope of the Chinese Academy of Sciences:
+            <br>Optical Identifications of the Quasar Candidates from WISP survey (2024, PI)
+            <br>Quasar slitless spectra observation and reverberation mapping research (2022, PI)         
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--分割线3-->
+    <div style="align-items: end;" class="section_box3">
+    </div>
+    <div class="container2">
+      <div style="height: 54px; display: flex; justify-content: center;" id="backToTop">
+        <img src="./icon/up_button.png" height="100%" alt="up_button_icon" style="cursor: pointer; transform: translateY(-27px);" class="icon_top" onclick="scrollToTop()">
+      </div>
+    </div>
+    <!--hobbies-->
+    <div style="align-items: center; justify-content: center;" class="flex flex1 container2">
+      <p class="hobbies_title">--HOBBIES--</p>
+    </div>  
+    <!--badminton-->
+    <div class="flex flex1 container2" id="hobby1">  
+      <div style="height: 400px; flex-direction: column;" class="flex flex1">
+        <div style="height: 50px; padding-top: 20px;" class="flex column">
+          <img src="./icon/badminton.svg" height="100%" alt="badminton_icon" style="transform: translateY(-3px);">
+          <p style="transform: translateX(12px);" class="section_title4">BADMINTON</p>
+        </div>
+        <div style="padding-top: 10px;" class="flex1">
+          <p class="section_word3">
+            ● Muitple times playing in PKU cup (represented the physics collage)
+            <br>● Badminton Weekly Activities Manager of KIAA in 2020-2021
+          </p>
+        </div>
+      </div>
+      <div style="height: 400px;" class="flex flex1 column">
+        <div style="height: 400px;" class="flex1">
+          <div style="height: 300px; text-align: center" class="flex1">
+              <img src="./picture/medals.jpg" style="border-radius: 50%; width: 280px; height: 300px;" alt="research1">
+              <!-- <p style="text-align: center" class="section_word1">Figure 1: </p> -->
+          </div>
+          <div style="height: 100px; text-align: center" class="flex1">
+              <p class="section_word1; text-align: center">
+                Some small medals from KIAA activities.
+              </p>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <!--go-->
+    <div class="flex flex1 container2" id="hobby2">
+      <div style="height: 400px; flex-direction: column;" class="flex flex1">
+        <div style="height: 50px; padding-top: 10px;" class="flex column">
+          <img src="./icon/go.png" height="100%" alt="go_icon" style="transform: translateY(-3px);">
+          <p style="transform: translateX(12px);" class="section_title4">GO</p>
+        </div>
+        <!-- <div style="padding-top: 10px;" class="flex1">
+          <p class="section_word3">
+            ● Art
+          </p>
+        </div> -->
+      </div>
+      <div style="height: 400px;" class="flex flex1 column">
+        <div style="height: 400px;" class="flex1">
+          <div style="height: 300px; text-align: center" class="flex1">
+              <img src="./picture/pic_go.jpg" height="100%" alt="research1">
+              <!-- <p style="text-align: center" class="section_word1">Figure 1: </p> -->
+          </div>
+          <div style="height: 100px; text-align: center" class="flex1">
+              <p class="section_word1; text-align: center">  
+                A brilliant move made by the master Huang Longshi of the Qing dynasty.
+              </p>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div style="flex-direction: column;" class="flex flex1 container2" id="hobby3">
+      <div style="height: 50px; padding-top: 10px;" class="flex column">
+        <img src="./icon/book.png" height="100%" alt="book_icon" style="transform: translateY(-10px);">
+        <p style="transform: translateX(12px);" class="section_title4">READING</p>
+      </div>
+      <div style="padding-top: 0px; flex-direction: column;" class="flex1">
+        <p class="section_word4">
+          <em>● History is the true poet and playwright; no writer could ever surpass it.</em>
+        </p>
+        <p style="text-align: right;" class="section_word4">
+          <em>-- 𝓢𝓽𝓮𝓯𝓪𝓷 𝓩𝔀𝓮𝓲𝓰</em>
+        </p>
+        <p class="section_word4">
+          <em>● With that disappearance... came the end, the final end of Eternity
+             — And the beginning of Infinity. </em>
+        </p>
+        <p style="text-align: right;" class="section_word4">
+          <em>-- 𝓘𝓼𝓪𝓪𝓬 𝓐𝓼𝓲𝓶𝓸𝓿</em>
+        </p>
+      </div>
+    </div>
+    <!--尾联-->
+    <div class="flex1 bottom_box">
+      <p class="bottom_word">
+        © Yuxuan Pang <a class="bottom_word2" href="mailto:1901110223@pku.edu.cn">/ pyx_s2@pku.edu.cn</a>
+      </p>
     </div>
   </body>
+
+  <script>
+    function updatePadding() {
+        const square1 = document.getElementById('self_intro');
+        const square2 = document.getElementById('research_ge');
+        const square3 = document.getElementById('dashline1');
+        const square4 = document.getElementById('research_dis');
+        const square5 = document.getElementById('research_pro');
+        const square6 = document.getElementById('more_info');
+        const square7 = document.getElementById('dashed2');
+        const square8 = document.getElementById('other_res');
+        const square9 = document.getElementById('hobby1');
+        const square10 = document.getElementById('hobby2');
+        const square11 = document.getElementById('hobby3');
+
+        const width = window.innerWidth; // 获取当前网页宽度
+        const padding1 = width / 8; // 计算 padding
+        const padding2 = width / 6; // 计算 padding
+        const padding3 = width / 5; // 计算 padding
+        square1.style.paddingLeft = padding1 + 'px';
+        square1.style.paddingRight = padding1 + 'px';
+        square2.style.paddingLeft = padding2 + 'px';
+        square2.style.paddingRight = padding2 + 'px';
+        square3.style.paddingLeft = padding1 + 'px';
+        square3.style.paddingRight = padding1 + 'px';
+        square4.style.paddingLeft = padding1 + 'px';
+        square4.style.paddingRight = padding1 + 'px';
+        square5.style.paddingLeft = padding1 + 'px';
+        square5.style.paddingRight = padding1 + 'px';
+        square6.style.paddingLeft = padding3 + 'px';
+        square6.style.paddingRight = padding3 + 'px';
+        square7.style.paddingLeft = padding1 + 'px';
+        square7.style.paddingRight = padding1 + 'px';
+        square8.style.paddingLeft = padding1 + 'px';
+        square8.style.paddingRight = padding1 + 'px';
+        square9.style.paddingLeft = padding3 + 'px';
+        square9.style.paddingRight = padding2 + 'px';
+        square10.style.paddingLeft = padding3 + 'px';
+        square10.style.paddingRight = padding2 + 'px';
+        square11.style.paddingLeft = padding3 + 'px';
+        square11.style.paddingRight = padding2 + 'px';
+
+    }
+
+    // 初始设置
+    updatePadding();
+
+    // 监听窗口大小变化
+    window.addEventListener('resize', updatePadding);
+  </script>
 </html>
